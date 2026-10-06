@@ -1,0 +1,38 @@
+/* All phrases sit in the same grid cell, so the line never changes width or height. */
+.stack {
+  display: inline-grid;
+}
+
+.word {
+  grid-area: 1 / 1;
+  justify-self: start;
+  opacity: 0;
+  transform: translateY(55%);
+
+  /* thin underline that follows the text, not a box behind it */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.16em;
+  text-decoration-skip-ink: none;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    text-decoration-color 0.3s ease;
+}
+
+.on {
+  opacity: 1;
+  transform: none;
+  text-decoration-color: var(--accent);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    text-decoration-color 0.5s 0.3s ease;
+}
+
+.out {
+  transform: translateY(-55%);
+}

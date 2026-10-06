@@ -1,0 +1,65 @@
+.nav {
+  position: sticky;
+  top: var(--header-h, 4.5rem);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  height: var(--tabs-h, 3.75rem);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.list {
+  position: relative;
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 1.25rem), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 1.25rem, #000 calc(100% - 1.25rem), transparent);
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+/* no transition on purpose: the highlight must change the moment the section does */
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--fg);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.on,
+.on:hover {
+  background: var(--fg);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.on svg {
+  color: var(--accent);
+}

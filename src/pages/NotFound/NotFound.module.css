@@ -1,0 +1,11 @@
+.wrap {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 6rem 1.25rem;
+  text-align: center;
+}
+
+.wrap p {
+  color: var(--muted);
+}

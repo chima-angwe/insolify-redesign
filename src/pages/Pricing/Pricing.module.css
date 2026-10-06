@@ -1,0 +1,20 @@
+.intro {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2rem;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.intro p {
+  margin: 0.75rem 0 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

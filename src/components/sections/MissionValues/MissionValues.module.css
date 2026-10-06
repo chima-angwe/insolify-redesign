@@ -1,0 +1,51 @@
+.section {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.item {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 1rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.item h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.item p {
+  margin: 0.75rem 0 0;
+  max-width: 28rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+@media (min-width: 800px) {
+  .section {
+    padding: 6rem 1.25rem;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}

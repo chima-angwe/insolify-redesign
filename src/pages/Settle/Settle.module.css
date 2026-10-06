@@ -1,0 +1,376 @@
+/* ---------- hero illustration ---------- */
+.visual {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  box-shadow: 0 20px 50px -20px rgb(0 0 0 / 0.25);
+}
+
+.visualHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.visualHead span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field small {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.field > div {
+  height: 3rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+}
+
+.swap {
+  display: flex;
+  justify-content: center;
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.chips .chipOn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+/* ---------- cost ---------- */
+.cost {
+  padding: 4rem 0;
+}
+
+.costInner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.costInner h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.costLead {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.points {
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.points svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--fg);
+}
+
+.points strong {
+  color: var(--fg);
+}
+
+.compare {
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  text-align: center;
+  height: fit-content;
+}
+
+.big {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.bigLabel {
+  margin: 0.25rem 0 1.5rem;
+  color: var(--muted);
+}
+
+.compare dl {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.compare dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+}
+
+.compare dt {
+  color: var(--muted);
+}
+
+.compare dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.compare .rowOn {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.compare .rowOn dt {
+  color: var(--accent-fg);
+}
+
+/* ---------- countries ---------- */
+.countries {
+  padding: 4rem 0;
+}
+
+.countriesInner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.countriesInner h2 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.popular {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popular li {
+  display: grid;
+  gap: 0.2rem;
+  justify-items: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  text-align: center;
+}
+
+.popular strong {
+  font-size: 1.2rem;
+}
+
+.popular span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.75rem 0 0;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: var(--surface);
+  border-color: var(--fg);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.toggle svg {
+  transition: transform 0.2s;
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.all {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1rem;
+  margin: 1.5rem 0 0;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface);
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- app ---------- */
+.app {
+  padding: 4rem 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.appInner {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
+.appIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.appInner h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.appInner p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.stores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 22rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .popular {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .all {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stores {
+    flex-direction: row;
+    justify-content: center;
+    max-width: none;
+    width: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .cost,
+  .countries,
+  .app {
+    padding: 6rem 0;
+  }
+  .costInner {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
+  .compare {
+    padding: 2.5rem 2rem;
+  }
+  .popular {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .all {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

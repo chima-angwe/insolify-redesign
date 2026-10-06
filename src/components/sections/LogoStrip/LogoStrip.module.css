@@ -1,0 +1,52 @@
+.strip {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.label {
+  margin: 0 0 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem 3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list img {
+  display: block;
+  height: 2.5rem;
+  width: auto;
+  max-width: 9rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.75;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.list img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+:global(.dark) .list li {
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+:global(.dark) .list img {
+  filter: none;
+  opacity: 1;
+}

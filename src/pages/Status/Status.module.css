@@ -1,0 +1,214 @@
+.page {
+  --ok: #15803d;
+  --bad: #b91c1c;
+  padding: 3rem 0 5rem;
+}
+
+:global(.dark) .page {
+  --ok: #4ade80;
+  --bad: #f87171;
+}
+
+.inner {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.inner h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- overall card ---------- */
+.overall {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--surface);
+}
+
+.dot {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.ok {
+  background: var(--ok);
+}
+
+.bad {
+  background: var(--bad);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sub {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.refresh:hover:not(:disabled) {
+  border-color: var(--fg);
+}
+
+.refresh:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.refresh:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- services ---------- */
+.list {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service {
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--surface);
+}
+
+.row h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.state {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.s_ok {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.s_error {
+  color: var(--bad);
+  font-weight: 600;
+}
+
+.s_checking,
+.s_unconfigured {
+  color: var(--muted);
+}
+
+.okIcon {
+  color: var(--ok);
+}
+
+.badIcon {
+  color: var(--bad);
+}
+
+.mutedIcon {
+  color: var(--muted);
+}
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 1rem 1.5rem 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--bad) 35%, transparent);
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--bad) 10%, var(--bg));
+  color: var(--bad);
+}
+
+.alert svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.alert p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.alert small {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 520px) {
+  .overall {
+    flex-wrap: wrap;
+  }
+  .refresh {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}

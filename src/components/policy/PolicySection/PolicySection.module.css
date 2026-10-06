@@ -1,0 +1,43 @@
+.section {
+  scroll-margin-top: calc(var(--header-h, 4.5rem) + var(--tabs-h, 3.75rem) + 1rem);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.head h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.bar {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.5rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+.body {
+  display: grid;
+  gap: 1.25rem;
+}
