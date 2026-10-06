@@ -10,7 +10,18 @@ import {
   Cog,
   FileCheck,
 } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import type { ProductKey } from '../config/logos'
 
+
+type Service = {
+  icon?: LucideIcon
+  product?: ProductKey
+  title: string
+  text: string
+  points: string[]
+  to?: string
+}
 
 export const INTRO = {
   title: 'About Insolify',
@@ -61,7 +72,7 @@ export const STATS = [
   { value: '24/7', label: 'Global support' },
 ]
 
-export const SERVICES = [
+export const SERVICES: Service[] = [
   {
     product: 'safi',
     title: 'Safi AI',
