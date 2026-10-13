@@ -4,5 +4,5 @@ export const CLIENTS = [
   { name: 'Fidfund Microfinance Bank', logo: '/logos/fidfunds.jpeg', scale: 1 },
   { name: 'Wapia', logo: '/logos/wapia.png', scale: 1 },
   { name: 'Peace Microfinance Bank', logo: '/logos/peace.png', scale: 1 },
-  { name: 'AC Finance', logo: '/logos/acfinance.webp', scale: 1 },
+  { name: 'AC Finance', logo: '/logos/acfinance.png', scale: 1 },
 ]
