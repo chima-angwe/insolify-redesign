@@ -1,8 +1,8 @@
-import { Link } from 'react-router'
-import { ArrowRight, Check } from 'lucide-react'
-import ProductMark from '../../ui/ProductMark'
-import { PRODUCTS } from '../../../data/products'
-import styles from './Products.module.css'
+import { Link } from "react-router";
+import { ArrowRight, Check } from "lucide-react";
+import ProductMark from "../../ui/ProductMark";
+import { PRODUCTS } from "../../../data/products";
+import styles from "./Products.module.css";
 
 export default function Products() {
   return (
@@ -17,8 +17,9 @@ export default function Products() {
           {PRODUCTS.map((p) => (
             <Link
               key={p.id}
+              data-reveal-item
               to={p.to}
-              className={`${styles.card} ${p.featured ? styles.featured : ''}`}
+              className={`${styles.card} ${p.featured ? styles.featured : ""}`}
             >
               <div className={styles.top}>
                 <ProductMark product={p.id} size="md" />
@@ -48,5 +49,5 @@ export default function Products() {
         </div>
       </div>
     </section>
-  )
+  );
 }

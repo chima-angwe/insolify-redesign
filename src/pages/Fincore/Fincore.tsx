@@ -1,85 +1,34 @@
-import ProductHero from "../../components/sections/ProductHero";
-import FincoreBenefits from "../../components/sections/FincoreBenefits";
-import FincoreModules from "../../components/sections/FincoreModules";
-import PricingTeaser from "../../components/sections/PricingTeaser";
-import CallToAction from "../../components/sections/CallToAction";
-import styles from "./Fincore.module.css";
+import DarkHero from '../../components/sections/DarkHero'
+import type { StripCard } from '../../components/sections/StripCards/StripCards'
 import ProductMark from '../../components/ui/ProductMark'
+import FincoreBenefits from '../../components/sections/FincoreBenefits'
+import FincoreModules from '../../components/sections/FincoreModules'
+import PricingTeaser from '../../components/sections/PricingTeaser'
+import CallToAction from '../../components/sections/CallToAction'
+import { PRICING } from '../../data/pricing'
 
-const STATS = [
-  { value: "12", label: "Modules available" },
-  { value: "4-6", label: "Weeks to deploy" },
-  { value: "Cloud", label: "Scalable architecture" },
-];
-
-const CHIPS = [
-  "Core Banking",
-  "Cards",
-  "InterBanking",
-  "Mobile Banking",
-  "USSD",
-  "Agency Banking",
-];
-
-/* Illustration only. It contains no figures, so nothing can be mistaken for real data. */
-function Visual() {
-  return (
-    <div className={styles.visual} aria-hidden="true">
-      <div className={styles.visualHead}>
-        <strong>Fincore</strong>
-        <span>Illustration</span>
-      </div>
-      <div className={styles.chips}>
-        {CHIPS.map((c) => (
-          <span key={c}>{c}</span>
-        ))}
-      </div>
-      <div className={styles.skeletonRow}>
-        <div />
-        <div />
-        <div />
-      </div>
-      <div className={styles.chart}>
-        {[40, 65, 50, 80, 60, 90, 70].map((h, i) => (
-          <div key={i} style={{ height: `${h}%` }} />
-        ))}
-      </div>
-      <div className={styles.lines}>
-        <div />
-        <div />
-        <div />
-      </div>
-    </div>
-  );
-}
-
-const TIERS = [
-  {
-    name: "Starter",
-    text: "The Fincore base platform, everything you need to go live.",
-  },
-  {
-    name: "Growth",
-    text: "Base platform plus the modules most customers add first.",
-  },
-  {
-    name: "Complete",
-    text: "Every available module, full platform capability.",
-  },
-];
+// Each card repeats a fact that is already on the live Fincore page.
+const CARDS: StripCard[] = [
+  { tone: 'yellow', label: 'Modules', title: '12 modules', text: 'Deploy them one at a time', motif: 'bars' },
+  { tone: 'light', label: 'Deployment', title: '4 to 6 weeks', text: 'Deployment timeline', motif: 'clock' },
+  { tone: 'dark', label: 'Channels', title: 'Mobile, web, USSD', text: 'Under your own brand', motif: 'phone' },
+  { tone: 'light', label: 'Interbank', title: 'NIBSS and Interswitch', text: 'Real-time transfers', motif: 'transfer' },
+  { tone: 'yellow', label: 'Compliance', title: 'Audit trails', text: 'Built-in regulatory tools', motif: 'shield' },
+  { tone: 'dark', label: 'Agency banking', title: 'Field agents and POS', text: 'Reach beyond branches', motif: 'network' },
+]
 
 export default function Fincore() {
   return (
     <>
-      <ProductHero
-        icon={<ProductMark product="fincore" size="lg" />}
+      <DarkHero
+        compact
+        mark={<ProductMark product="fincore" size="lg" />}
         name="Fincore"
-        headline="A modern core banking platform for financial institutions"
-        text="FINCORE™ is a next-generation core banking platform designed by Insolify Limited for microfinance banks, fintech companies and finance houses. Built on secure, scalable cloud architecture, it simplifies operations, supports compliance and works across every banking channel, from teller operations and card management to digital banking and agency banking."
-        stats={STATS}
-        primary={{ label: "Request a demo", to: "/contact" }}
-        secondary={{ label: "Explore modules", href: "#modules" }}
-        visual={<Visual />}
+        headline="One platform for every part of your bank"
+        text="FINCORE is a core banking platform designed by Insolify for microfinance banks, fintech companies and finance houses. Built on secure, scalable cloud architecture, it works across every banking channel."
+        primary={{ label: 'Request a demo', to: '/contact' }}
+        secondary={{ label: 'Explore modules', href: '#modules' }}
+        cards={CARDS}
       />
       <FincoreBenefits />
       <FincoreModules />
@@ -87,11 +36,11 @@ export default function Fincore() {
         product="fincore"
         title="See Fincore pricing"
         intro="Three plans, from the base platform to every module. See what each includes and choose the one that fits your institution."
-        tiers={TIERS}
+        tiers={PRICING.fincore.tiers.map((t) => ({ name: t.name, text: t.blurb }))}
         note="Pricing based on customer limits. Deployment timeline: 4-6 weeks. Valid license (CBN or Partnership for non-compliant) and dedicated domain name required."
         label="View Fincore pricing"
       />
       <CallToAction />
     </>
-  );
+  )
 }

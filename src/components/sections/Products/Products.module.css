@@ -1,12 +1,9 @@
 .section {
   padding: 4rem 0;
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
 }
 
 .inner {
-  max-width: 80rem;
+  max-width: 72rem;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -17,9 +14,11 @@
 
 .header h2 {
   margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 3.25rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .header p {
@@ -34,21 +33,21 @@
 }
 
 .card {
+  --c-fg: var(--fg);
+  --c-muted: var(--muted);
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
   border-radius: 1.25rem;
-  color: inherit;
+  background: var(--surface);
+  color: var(--c-fg);
   text-decoration: none;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  border-color: var(--fg);
-  box-shadow: 0 16px 36px -18px rgb(0 0 0 / 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -22px rgb(0 0 0 / 0.4);
 }
 
 .card:focus-visible {
@@ -57,8 +56,16 @@
 }
 
 .featured {
-  border-color: var(--accent);
-  border-width: 2px;
+  --c-fg: var(--accent-fg);
+  --c-muted: color-mix(in srgb, var(--accent-fg) 72%, transparent);
+  background: var(--accent);
+}
+
+.card:nth-child(2) {
+  --c-fg: #fff;
+  --c-muted: #b3b3b3;
+  background: #1b1b1b;
+  border: 1px solid #2e2e2e;
 }
 
 .top {
@@ -68,54 +75,37 @@
   margin-bottom: 1.25rem;
 }
 
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.75rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
-.featured .icon {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-fg);
-}
-
 .tag {
   padding: 0.25rem 0.7rem;
   border-radius: 9999px;
-  background: var(--accent);
-  color: var(--accent-fg);
+  background: #0a0a0a;
+  color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
 }
 
 .category {
   margin: 0;
-  font-size: 0.8rem;
+  color: var(--c-muted);
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
 }
 
 .name {
   margin: 0.35rem 0 0;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .featured .name {
-  font-size: 1.9rem;
+  font-size: 2.1rem;
 }
 
 .desc {
   margin: 0.75rem 0 0;
-  color: var(--muted);
+  color: var(--c-muted);
   line-height: 1.6;
 }
 
@@ -131,12 +121,12 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  color: var(--c-fg);
   font-size: 0.95rem;
 }
 
 .points svg {
   flex-shrink: 0;
-  color: var(--fg);
 }
 
 .more {
@@ -146,7 +136,6 @@
   margin-top: auto;
   padding-top: 1.5rem;
   font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .more svg {
@@ -161,12 +150,10 @@
   .section {
     padding: 6rem 0;
   }
-
   .grid {
     grid-template-columns: 1.3fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-
   .featured {
     grid-row: 1 / span 2;
     padding: 2rem;

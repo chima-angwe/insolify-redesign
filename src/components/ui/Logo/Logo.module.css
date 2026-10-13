@@ -1,18 +1,20 @@
 .logo {
+  /* tune these two: more negative pulls the drop closer to the letters */
+  --pull-left: -0.14em;
+  --pull-right: -0.12em;
   display: inline-flex;
   align-items: center;
   font-size: 1.65rem;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   color: inherit;
   white-space: nowrap;
 }
 
-/* If the drop looks too big or small next to the letters, change this height */
 .drop {
   display: block;
   height: 1.2em;
   width: auto;
-  margin: 0 0.04em;
+  margin: 0 var(--pull-right) 0 var(--pull-left);
 }

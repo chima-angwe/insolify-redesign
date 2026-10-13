@@ -1,12 +1,12 @@
 .strip {
-  max-width: 80rem;
+  max-width: 72rem;
   margin: 0 auto;
   padding: 2rem 1.25rem 3rem;
   text-align: center;
 }
 
 .label {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.75rem;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -15,38 +15,53 @@
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem 3rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.list img {
-  display: block;
-  height: 2.5rem;
+/* identical box for every logo */
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+}
+
+.slot img {
+  max-width: 8.5rem;
+  max-height: 100%;
   width: auto;
-  max-width: 9rem;
+  height: auto;
   object-fit: contain;
   filter: grayscale(1);
-  opacity: 0.75;
+  opacity: 0.8;
   transition: filter 0.2s, opacity 0.2s;
 }
 
-.list img:hover {
+.slot img:hover {
   filter: none;
   opacity: 1;
 }
 
-:global(.dark) .list li {
+:global(.dark) .slot {
   padding: 0.5rem 0.9rem;
   border-radius: 0.6rem;
   background: #fff;
 }
-:global(.dark) .list img {
+
+:global(.dark) .slot img {
   filter: none;
   opacity: 1;
+}
+
+@media (min-width: 700px) {
+  .list {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem 2rem;
+  }
 }

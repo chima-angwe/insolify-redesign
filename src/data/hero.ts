@@ -1,16 +1,17 @@
-export const HERO = {
-  eyebrow: 'Core banking, AI and payments infrastructure',
-  lead: "Core banking for Africa's",
-  // read by screen readers and search engines; the animated version is hidden from them
-  headline: "Core banking for Africa's microfinance banks, fintechs and finance houses",
-  subheading:
-    'Fincore gives microfinance banks, fintechs and finance houses a secure core banking system, plus mobile and internet banking, ready to deploy.',
-  badges: [
-    { icon: 'shield', label: 'Built for regulated financial institutions' },
-    { icon: 'lock', label: 'Encrypted in transit and at rest' },
-    { icon: 'globe', label: 'Built for African markets' },
-    { icon: 'headset', label: 'Dedicated onboarding and support' },
-  ],
-} as const
+import type { StripCard } from '../components/sections/StripCards/StripCards'
 
-export const HERO_WORDS: string[] = ['microfinance banks', 'fintechs', 'finance houses']
+export const HERO = {
+  headline: 'Core banking built for African banks',
+  subheading:
+    'Fincore runs accounts, loans, payments and mobile banking for microfinance banks and fintechs. Switch on the modules you need as you grow.',
+}
+
+// Every line comes from the Fincore module list. No figures, names or amounts.
+export const HERO_CARDS: StripCard[] = [
+  { tone: 'yellow', label: 'Core banking', title: '12 modules', text: 'Accounts, loans, ledger', motif: 'bars' },
+  { tone: 'light', label: 'Mobile banking', title: 'Android and iOS', text: 'Fully branded apps', motif: 'phone' },
+  { tone: 'dark', label: 'Interbank', title: 'NIBSS and Interswitch', text: 'Real-time transfers', motif: 'transfer' },
+  { tone: 'yellow', label: 'Cards', title: 'Full card lifecycle', text: 'Issue, block, monitor', motif: 'card' },
+  { tone: 'light', label: 'USSD', title: 'No internet needed', text: 'Banking on any phone', motif: 'keypad' },
+  { tone: 'dark', label: 'Agency banking', title: 'Field agents and POS', text: 'Reach beyond branches', motif: 'network' },
+]

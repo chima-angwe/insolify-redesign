@@ -1,63 +1,38 @@
-import { ArrowRight } from 'lucide-react'
+import DarkHero from '../../components/sections/DarkHero'
+import type { StripCard } from '../../components/sections/StripCards/StripCards'
 import ProductMark from '../../components/ui/ProductMark'
-import ProductHero from '../../components/sections/ProductHero'
 import FeatureCards from '../../components/sections/FeatureCards'
 import ChecklistCards from '../../components/sections/ChecklistCards'
 import PricingTeaser from '../../components/sections/PricingTeaser'
 import CallToAction from '../../components/sections/CallToAction'
 import { EXTERNAL_LINKS } from '../../config/links'
 import { PRICING } from '../../data/pricing'
-import { SAFI_STATS, SAFI_FEATURES, SAFI_CAPABILITIES } from '../../data/safi'
-import styles from './Safi.module.css'
+import { SAFI_FEATURES, SAFI_CAPABILITIES } from '../../data/safi'
 
-/* Static preview only. The real assistant is the chat button on the site. */
-function ChatPreview() {
-  return (
-    <div className={styles.chat} aria-hidden="true">
-      <div className={styles.head}>
-        <ProductMark product="safi" size="sm" />
-        <div>
-          <strong>Safi AI Assistant</strong>
-          <small>Online, ready to help</small>
-        </div>
-        <em>Preview</em>
-      </div>
-      <div className={styles.body}>
-        <p className={styles.bubble}>
-          Hello! I'm Safi AI, your intelligent assistant. How can I help you today?
-        </p>
-      </div>
-      <div className={styles.input}>
-        <span>Type your message...</span>
-        <span className={styles.send}>
-          <ArrowRight size={16} />
-        </span>
-      </div>
-    </div>
-  )
-}
+// Each card repeats a feature already listed on the live Safi page.
+const CARDS: StripCard[] = [
+  { tone: 'yellow', label: 'Speed', title: 'Instant responses', text: 'An optimized AI engine', motif: 'chat' },
+  { tone: 'light', label: 'Languages', title: '9+ languages', text: 'With real-time translation', motif: 'globe' },
+  { tone: 'dark', label: 'Security', title: 'Bank-level encryption', text: 'Industry-standard compliance', motif: 'shield' },
+  { tone: 'light', label: 'Analytics', title: 'Usage reports', text: 'Insight into conversations', motif: 'bars' },
+  { tone: 'yellow', label: 'Integrations', title: 'Your existing tools', text: 'Connect without rework', motif: 'network' },
+]
 
 export default function Safi() {
   return (
     <>
-      <ProductHero
-        icon={<ProductMark product="safi" size="lg" />}
+      <DarkHero
+        compact
+        mark={<ProductMark product="safi" size="lg" />}
         name="Safi AI"
-        headline="Meet your intelligent assistant"
-        text="Safi AI is a cutting-edge conversational AI designed to streamline your workflow, answer complex questions, and drive productivity through natural, intelligent interactions."
-        stats={SAFI_STATS}
+        headline="Meet Safi, your AI assistant"
+        text="Safi AI is a conversational AI designed to streamline your workflow, answer complex questions and drive productivity through natural, intelligent interactions."
         primary={{ label: 'Start chatting now', href: EXTERNAL_LINKS.registerSafi }}
-        secondary={{ label: 'Learn more', href: '#features' }}
-        visual={<ChatPreview />}
+        secondary={{ label: 'See what it can do', href: '#features' }}
+        cards={CARDS}
       />
 
-      <FeatureCards
-        id="features"
-        title="Powerful features"
-        items={SAFI_FEATURES}
-        columns={3}
-        tone="tinted"
-      />
+      <FeatureCards id="features" title="Powerful features" items={SAFI_FEATURES} columns={3} tone="tinted" />
 
       <ChecklistCards title="What Safi AI can do" groups={SAFI_CAPABILITIES} columns={2} />
 

@@ -1,0 +1,138 @@
+.motif {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.bar {
+  fill: currentColor;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: grow 2.4s ease-in-out infinite alternate;
+  animation-delay: calc(var(--i) * 0.18s);
+}
+
+@keyframes grow {
+  from {
+    transform: scaleY(0.55);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.blink {
+  animation: blink 2.6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.28s);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.right {
+  animation: nudgeR 1.8s ease-in-out infinite alternate;
+}
+
+.left {
+  animation: nudgeL 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes nudgeR {
+  to {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes nudgeL {
+  to {
+    transform: translateX(-5px);
+  }
+}
+
+.shine {
+  opacity: 0;
+  animation: shine 3.2s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-14px);
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(14px);
+    opacity: 0;
+  }
+}
+
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.5);
+    opacity: 0.55;
+  }
+}
+
+.check {
+  stroke-dasharray: 1;
+  animation: tick 3.6s ease-in-out infinite;
+}
+
+@keyframes tick {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  35%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hand {
+  transform-origin: 32px 24px;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.turn {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: turn 4s ease-in-out infinite alternate;
+}
+
+@keyframes turn {
+  from {
+    transform: scaleX(0.2);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

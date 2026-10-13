@@ -7,8 +7,13 @@ export default function LogoStrip() {
       <p className={styles.label}>Trusted by</p>
       <ul className={styles.list}>
         {CLIENTS.map((c) => (
-          <li key={c.name}>
-            <img src={c.logo} alt={c.name} loading="lazy" />
+          <li key={c.name} className={styles.slot}>
+            <img
+              src={c.logo}
+              alt={c.name}
+              loading="lazy"
+              style={{ transform: `scale(${c.scale})` }}
+            />
           </li>
         ))}
       </ul>
