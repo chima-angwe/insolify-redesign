@@ -24,6 +24,7 @@ export const MAIN_LINKS = [
   { label: 'Pricing', to: '/pricing' },
   { label: 'TVerify', to: '/track' },
   { label: 'Status', to: '/status' },
-  { label: 'About', to: '/about' },
+  { label: 'Company', to: '/about' },
+  { label: 'Careers', to: '/careers' },
   { label: 'Contact', to: '/contact' },
 ]

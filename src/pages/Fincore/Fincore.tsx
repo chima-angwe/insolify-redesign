@@ -5,6 +5,8 @@ import FincoreModules from '../../components/sections/FincoreModules'
 import PricingTeaser from '../../components/sections/PricingTeaser'
 import CallToAction from '../../components/sections/CallToAction'
 import ExploreProducts from '../../components/sections/ExploreProducts/ExploreProducts'
+import FaqSection from '../../components/sections/FaqSection'
+import { FINCORE_FAQS } from '../../data/fincore'
 
 export default function Fincore() {
   return (
@@ -33,6 +35,7 @@ export default function Fincore() {
         label="View Fincore pricing"
       />
       <ExploreProducts current="fincore" />
+      <FaqSection eyebrow="FAQ" title="Common questions." items={FINCORE_FAQS} align="start" indicator="plus" />
       <CallToAction />
     </>
   )

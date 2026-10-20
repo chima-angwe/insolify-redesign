@@ -126,3 +126,34 @@ export const BENEFITS = [
     items: ['Real-time monitoring', 'Regulatory compliance', 'Fraud detection', 'Audit trails'],
   },
 ]
+
+export const FINCORE_FAQS = [
+  {
+    q: 'What is FinCore?',
+    a: "FinCore is Insolify's financial platform for banks, fintechs, lenders and insurers, covering core banking, accounting, lending, payments and digital channels.",
+  },
+  {
+    q: 'How much faster is FinCore?',
+    a: 'Institutions can see up to 50x faster transactions through real-time posting. Actual results depend on your volumes, integrations and deployment.',
+  },
+  {
+    q: 'How does FinCore handle uptime?',
+    a: 'FinCore is designed for high availability with multi-zone redundancy, automatic failover and zero-downtime releases. Uptime commitments are confirmed in your order.',
+  },
+  {
+    q: 'How does fraud detection work?',
+    a: 'Transactions can be screened in real time by Safi, which scores risk and approves, steps up or blocks activity, including edge cases like SIM swaps, mule accounts and replayed requests.',
+  },
+  {
+    q: 'Can I keep my data in-country?',
+    a: 'Yes. FinCore offers data residency options and generates regulatory returns, KYC/AML controls and audit trails. Supported frameworks depend on your jurisdiction.',
+  },
+  {
+    q: 'How do I migrate from my current banking or ERP software?',
+    a: 'Connect your existing system and FinCore maps accounts, balances, customers and history, then validates and reconciles the data before go-live.',
+  },
+  {
+    q: 'How much does FinCore cost?',
+    a: 'Pricing starts from $500 per year. Final pricing depends on capabilities, integrations and deployment.',
+  },
+]

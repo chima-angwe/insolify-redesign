@@ -5,8 +5,9 @@ import SafiVoiceSection from '../../components/sections/SafiVoiceSection/SafiVoi
 import PricingTeaser from '../../components/sections/PricingTeaser'
 import CallToAction from '../../components/sections/CallToAction'
 import ExploreProducts from '../../components/sections/ExploreProducts/ExploreProducts'
+import FaqSection from '../../components/sections/FaqSection'
 import { EXTERNAL_LINKS } from '../../config/links'
-import { SAFI_FEATURES } from '../../data/safi'
+import { SAFI_FAQS, SAFI_FEATURES } from '../../data/safi'
 
 export default function Safi() {
   return (
@@ -38,6 +39,7 @@ export default function Safi() {
       />
 
       <ExploreProducts current="safi" />
+      <FaqSection eyebrow="FAQ" title="Common questions." items={SAFI_FAQS} align="start" indicator="plus" />
 
       <CallToAction
         title="Ready to experience Safi AI?"

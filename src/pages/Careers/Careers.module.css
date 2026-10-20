@@ -1,0 +1,55 @@
+.page { background: var(--bg); color: var(--fg); }
+.hero {
+  position: relative;
+  display: grid;
+  min-height: min(42rem, 88vh);
+  place-items: center;
+  overflow: hidden;
+  padding: 8rem 1.25rem 6rem;
+  text-align: center;
+  background-color: #080808;
+  background-image: radial-gradient(circle, rgb(255 255 255 / .11) 2px, transparent 2.5px);
+  background-position: center 1.2rem;
+  background-size: 3rem 3rem;
+}
+.hero::before { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(0 0 0 / .25), #080808 94%); content: ''; }
+.heroContent { position: relative; width: min(100%, 52rem); }
+.eyebrow { margin: 0 0 .7rem; color: #9fc5df; font-size: .78rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.hero h1 { max-width: 50rem; margin: 0 auto; font-size: clamp(2.8rem, 6.5vw, 4.25rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.05; }
+.heroText { max-width: 43rem; margin: 1.2rem auto 0; color: #d0d0d0; font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 1.65; }
+.heroButton { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1.45rem; padding: .85rem 1.1rem; border-radius: .7rem; background: #f5f5f5; color: #111; font-size: .95rem; font-weight: 500; text-decoration: none; transition: transform .2s, background .2s; }
+.heroButton:hover { transform: translateY(-2px); background: #dedede; }
+.section { padding: clamp(4.5rem, 8vw, 7rem) 1.25rem; }
+.sectionTint { background: var(--surface); }
+.content { width: min(100%, 68rem); margin: 0 auto; }
+.sectionHeading { max-width: 48rem; margin-bottom: 1.8rem; }
+.sectionHeading h2, .equalContent h2 { margin: 0; font-size: clamp(2rem, 4vw, 2.55rem); font-weight: 500; letter-spacing: -.035em; }
+.intro { margin: .35rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+.locationGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.locationCard, .workCard, .environmentCard { min-width: 0; padding: 1.45rem; border: 1px solid var(--border); border-radius: .85rem; background: var(--surface); }
+.sectionTint .workCard, .sectionTint .areaCard { background: var(--bg); }
+.locationCard svg, .workCard svg, .environmentCard svg { color: var(--fg); }
+.locationCard h3, .workCard h3, .environmentCard h3, .areaCard h3 { margin: .55rem 0 .2rem; font-size: 1.15rem; font-weight: 500; letter-spacing: -.015em; }
+.locationCard p, .workCard p, .environmentCard p, .areaCard p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.55; }
+.workGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.environmentGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.areaList { display: grid; gap: .8rem; }
+.areaCard { padding: 1.25rem 1.5rem; border-radius: .8rem; background: var(--surface); }
+.areaCard h3 { margin: 0 0 .2rem; }
+.equalSection { padding: clamp(4rem, 8vw, 6.5rem) 1.25rem; }
+.equalContent { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 7vw, 6rem); width: min(100%, 68rem); margin: 0 auto; align-items: start; }
+.equalContent h2 { max-width: 24rem; }
+.equalCopy { color: var(--muted); font-size: 1rem; line-height: 1.65; }
+.equalCopy p { margin: 0 0 1rem; }
+.equalCopy p:last-child { margin-bottom: 0; }
+.buildSection { background: var(--surface); }
+.buildSection .sectionHeading { max-width: 54rem; margin-bottom: .75rem; }
+.textLink { display: inline-flex; align-items: center; gap: .45rem; color: var(--fg); font-weight: 600; text-decoration: none; }
+.textLink:hover { text-decoration: underline; }
+.heroButton:focus-visible, .textLink:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: .25rem; }
+@media (max-width: 700px) {
+  .hero { min-height: min(38rem, 82vh); padding-top: 7rem; }
+  .locationGrid, .workGrid, .environmentGrid, .equalContent { grid-template-columns: 1fr; }
+  .equalContent { gap: 1.5rem; }
+  .section { padding: 4.25rem 1.1rem; }
+}

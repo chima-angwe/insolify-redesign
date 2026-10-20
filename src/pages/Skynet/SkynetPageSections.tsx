@@ -1,7 +1,6 @@
 import { useState, type CSSProperties } from 'react'
-import { ArrowRight, Boxes, Cpu, Database, HardDrive, Mail, Network, Server, ShieldCheck, Zap } from 'lucide-react'
+import { ArrowRight, Boxes, Cpu, Database, HardDrive, Mail, Server, ShieldCheck, Zap } from 'lucide-react'
 import Button from '../../components/ui/Button'
-import { EXTERNAL_LINKS } from '../../config/links'
 import styles from './SkynetPageSections.module.css'
 
 const ARCHITECTURES = [
@@ -126,24 +125,13 @@ export function SkynetSimpleHosting() {
   )
 }
 
-export function SkynetBuilderApp() {
+export function SkynetBuilderResources() {
   return (
-    <section className={styles.builderSection} aria-label="Skynet developer resources and mobile app">
+    <section className={styles.builderSection} aria-label="Skynet developer resources">
       <div className={styles.inner}>
         <div className={styles.builderCallout}>
           <div><h2>Built for builders.</h2><p>Find the tools and guidance to get your infrastructure up and running. Talk to our team about current access and deployment options.</p></div>
-          <Button href={EXTERNAL_LINKS.docs}>Developer resources <ArrowRight size={16} aria-hidden="true" /></Button>
-        </div>
-        <div className={styles.mobileApp}>
-          <span className={styles.eyebrow}>Skynet mobile app</span>
-          <h2>Stay connected, stay in control.</h2>
-          <p>Infrastructure and operations don’t wait for office hours. Keep monitoring, alerts and essential controls close at hand.</p>
-          <div className={styles.appFeatures}>
-            <article><Network size={20} /><strong>Live monitoring</strong><span>Keep an eye on service health and performance.</span></article>
-            <article><Mail size={20} /><strong>Instant alerts</strong><span>Know about incidents as they happen.</span></article>
-            <article><ShieldCheck size={20} /><strong>Respond faster</strong><span>Act on issues while away from your desk.</span></article>
-          </div>
-          <div className={styles.storeLinks} aria-label="Mobile app availability"><span>Google Play <small>Coming soon</small></span><span>App Store <small>Coming soon</small></span></div>
+          <Button to="/contact">Developer resources <ArrowRight size={16} aria-hidden="true" /></Button>
         </div>
       </div>
     </section>

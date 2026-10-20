@@ -1,17 +1,29 @@
-.footer { background: #101010; color: #e8e8e8; padding: 3.5rem 0 2rem; }
+.footer { background: #080808; color: #e8e8e8; padding: 3.5rem 0 2rem; }
 .inner { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; }
-.trust { display: grid; gap: .8rem; margin: 0 0 2.75rem; padding: 0 0 2rem; list-style: none; border-bottom: 1px solid #363636; color: #b8b8b8; font-size: .88rem; }
-.columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-.heading { margin: 0 0 1rem; color: #f5f5f5; font-family: var(--font-display); font-size: .95rem; font-weight: 600; }
-.list { display: grid; gap: .7rem; margin: 0; padding: 0; list-style: none; }
-.link { color: #b8b8b8; text-decoration: none; font-size: .9rem; transition: color .2s; }
+.top { display: grid; grid-template-columns: minmax(10rem, 1fr) minmax(0, 4fr); gap: clamp(2rem, 5vw, 5rem); padding-bottom: 2.5rem; }
+.brand { max-width: 14rem; color: #f4f4f4; }
+.brand p { margin: .75rem 0 0; color: #b8b8b8; font-size: .85rem; line-height: 1.5; }
+.columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+.heading { margin: 0 0 .85rem; color: #f5f5f5; font-family: var(--font-display); font-size: .98rem; font-weight: 550; }
+.list { display: grid; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.link { color: #b8b8b8; text-decoration: none; font-size: .85rem; transition: color .2s; }
 .link:hover { color: #fff; }
-.copy { margin: 2.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid #363636; color: #999; font-size: .82rem; }
-.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .65rem; margin: 2.5rem 0 0; padding: 0; list-style: none; }
-.badge { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.7rem; padding: .4rem .65rem; border: 1px solid #414141; border-radius: .55rem; color: #f1f1f1; }
+.link:focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 2px; }
+.badges { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin: 0; padding: 1.25rem 0 2.25rem; list-style: none; border-bottom: 1px solid #363636; }
+.badge { display: inline-flex; align-items: center; gap: .55rem; min-height: 2.5rem; padding: .38rem .62rem; border: 1px solid #414141; border-radius: .55rem; color: #f1f1f1; }
 .badge > svg { flex: 0 0 auto; }
 .badge > span { display: grid; gap: .05rem; }
-.badge strong { font-size: .74rem; line-height: 1.15; }
-.badge small { color: #aaa; font-size: .63rem; line-height: 1.15; }
-@media (min-width: 900px) { .trust { grid-template-columns: repeat(4, 1fr); } .columns { grid-template-columns: repeat(4, 1fr); } }
-.brand { margin-bottom: 2rem; color: #f4f4f4; }
+.badge strong { font-size: .72rem; line-height: 1.15; }
+.badge small { color: #aaa; font-size: .61rem; line-height: 1.15; }
+.copy { margin: 0; padding-top: 1.2rem; color: #b8b8b8; font-size: .75rem; line-height: 1.6; text-align: center; }
+.copy p { margin: 0; }
+.copy p + p { margin-top: .35rem; }
+@media (max-width: 850px) {
+  .top { grid-template-columns: 1fr; gap: 2rem; }
+  .columns { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .footer { padding-top: 2.75rem; }
+  .columns { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
+  .badges { justify-content: flex-start; }
+}

@@ -4,7 +4,10 @@ import ProductMark from '../../components/ui/ProductMark'
 import ExploreProducts from '../../components/sections/ExploreProducts/ExploreProducts'
 import SkynetConfigurator from '../../components/sections/SkynetConfigurator/SkynetConfigurator'
 import CallToAction from '../../components/sections/CallToAction'
-import { SkynetArchitectures, SkynetBuilderApp, SkynetMailHosting, SkynetSimpleHosting } from './SkynetPageSections'
+import { SkynetArchitectures, SkynetBuilderResources, SkynetMailHosting, SkynetSimpleHosting } from './SkynetPageSections'
+import AppDownloadPromo from '../../components/sections/AppDownloadPromo/AppDownloadPromo'
+import FaqSection from '../../components/sections/FaqSection'
+import { SKYNET_FAQS } from '../../data/skynet'
 import styles from './Skynet.module.css'
 
 const BUILDING_BLOCKS = [
@@ -57,8 +60,10 @@ export default function Skynet() {
       <SkynetConfigurator />
       <SkynetMailHosting />
       <SkynetSimpleHosting />
-      <SkynetBuilderApp />
+      <SkynetBuilderResources />
+      <AppDownloadPromo product="skynet" />
       <ExploreProducts current="skynet" />
+      <FaqSection eyebrow="FAQ" title="Common questions." items={SKYNET_FAQS} align="start" indicator="plus" />
 
       <CallToAction
         title="Build on Skynet"

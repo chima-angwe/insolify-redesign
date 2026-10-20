@@ -7,6 +7,8 @@ import Settle from './pages/Settle'
 import Skynet from './pages/Skynet'
 import Pricing from './pages/Pricing'
 import About from './pages/About'
+import Solutions from './pages/Solutions'
+import Careers from './pages/Careers'
 import Track from './pages/Track'
 import Status from './pages/Status'
 import Privacy from './pages/Privacy'
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="skynet" element={<Skynet />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about" element={<About />} />
+          <Route path="solutions" element={<Solutions />} />
+          <Route path="careers" element={<Careers />} />
           <Route path="track" element={<Track />} />
           <Route path="status" element={<Status />} />
           <Route path="privacy" element={<Privacy />} />

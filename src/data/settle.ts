@@ -147,27 +147,27 @@ export const ALL_COUNTRIES = [
 
 export const SETTLE_FAQS = [
   {
-    q: 'What information do I need to send money abroad?',
-    a: "You need to register with Settle Africa to send an international money transfer. You can access the Settle Africa app on your Android or iOS phone. We'll need your personal details (full name, email address, mobile phone number, gender, birth date and address), transfer details (amount, receive method, payment method), receiver details (full name, mobile number and email address), and payment details (bank account, debit card or credit card).",
+    q: 'What is Settle?',
+    a: "Settle is Insolify's consumer app for sending and receiving money across Africa and seeing your connected finances in one place.",
   },
   {
-    q: 'What are the benefits of sending money online with Settle Africa?',
-    a: 'Over 8 million customers use Settle Africa to send and receive money across the world. We offer up to four receive methods worldwide and are always fast, secure and easy to use. Every transfer with us is covered by our stringent security checks. Settle Africa is authorised and regulated by financial regulators in multiple countries.',
+    q: 'Can I send money from Nairobi to Abuja?',
+    a: 'That is the kind of route Settle is designed for: you send in your currency and the recipient receives in theirs. Availability depends on market, regulation and provider.',
   },
   {
-    q: 'What verification do I need to send an international transfer?',
-    a: "We'll verify your mobile phone number with an OTP. You may be required to provide ID proof and a selfie image to verify your identity. Identity verification takes up to 4 minutes at least 90% of the time. In case of a delay, we'll contact you instantly.",
+    q: 'Will I see the rate and fees first?',
+    a: 'Yes. The exchange rate and fees are shown before you confirm a payment.',
   },
   {
-    q: 'How much money can I send abroad?',
-    a: 'The amount you can send depends on the country you are sending money to. It may also vary depending on the receive method, as well as local regulations.',
+    q: 'How do I track a payment?',
+    a: 'Each payment can be followed from sent to received inside the app.',
   },
   {
-    q: 'How long does an online money transfer take?',
-    a: 'In most cases, money transfers sent using Settle Africa will arrive within minutes. You will see the expected delivery time before you make a payment. We aim to complete transfers within the suggested time, but some transfers may take longer depending on the receive method.',
+    q: 'Is Settle secure?',
+    a: 'Payments are confirmed with a PIN or biometrics and can be screened for fraud by Safi. Features depend on supported providers and market rules.',
   },
   {
-    q: 'How do I track my Settle Africa transfer?',
-    a: "After sending money, you can quickly start tracking it every step of the way. We'll send you a notification with all your transfer details instantly. You can also use the app to check on previous transfers. If you have sent money within the last hour, please wait for confirmation that it has arrived.",
+    q: 'Which countries are supported?',
+    a: 'Supported markets vary and are expanding. Contact the Insolify team for current availability.',
   },
 ]

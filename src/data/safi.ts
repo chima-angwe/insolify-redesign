@@ -34,3 +34,34 @@ export const SAFI_FEATURES = [
     text: 'Assist repeatable workflows with appropriate human review.',
   },
 ]
+
+export const SAFI_FAQS = [
+  {
+    q: 'What is Safi?',
+    a: "Safi is Insolify's AI platform for financial intelligence, voice and conversational banking, forecasting, advisory and fraud detection.",
+  },
+  {
+    q: 'Which languages can Safi understand?',
+    a: 'Safi listens in real time in English, Kiswahili, Hausa, Arabic, Yorùbá and Igbo. Dialect coverage and accuracy depend on your deployment.',
+  },
+  {
+    q: 'Can customers make transactions by talking to Safi?',
+    a: 'Yes. Customers can request transfers, airtime and bill payments by conversation. Safi reads the details back and requires authentication before any money moves.',
+  },
+  {
+    q: 'What is vibe financing?',
+    a: 'It lets people with limited accounting knowledge describe transactions in plain words. Safi drafts the journal entries and explains them, and a person reviews them before posting.',
+  },
+  {
+    q: 'How accurate are the forecasts and advice?',
+    a: 'Forecasts show confidence ranges and are decision support, not guarantees or regulated investment advice.',
+  },
+  {
+    q: 'How does Safi detect fraud?',
+    a: 'It scores transactions in real time using behaviour, device, location and network signals, including cases like SIM swaps, mule accounts and structuring.',
+  },
+  {
+    q: 'Does Safi work with FinCore?',
+    a: 'Yes. Safi runs natively inside FinCore and can also work alongside your existing systems.',
+  },
+]

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 import { useLocation } from 'react-router'
-import { Mail, CalendarDays, MapPin, ChevronDown } from 'lucide-react'
+import { Mail, CalendarDays, MapPin } from 'lucide-react'
 import Button from '../../components/ui/Button'
+import FaqItem from '../../components/sections/FaqSection/FaqItem'
 import { CONTACT } from '../../config/links'
 import { SUBJECTS, OFFICES, FAQS } from '../../data/contact'
 import styles from './Contact.module.css'
@@ -191,13 +192,7 @@ export default function Contact() {
           <h2 className={styles.title}>Frequently asked questions</h2>
           <div className={styles.faqs}>
             {faqs.map((f) => (
-              <details key={f.q} className={styles.faq}>
-                <summary>
-                  {f.q}
-                  <ChevronDown size={18} aria-hidden="true" />
-                </summary>
-                <p>{f.a}</p>
-              </details>
+              <FaqItem key={f.q} question={f.q} answer={f.a} />
             ))}
           </div>
         </section>

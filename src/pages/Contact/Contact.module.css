@@ -229,44 +229,6 @@
   gap: 0.75rem;
 }
 
-.faq {
-  border: 1px solid var(--border);
-  border-radius: 0.9rem;
-  background: var(--bg);
-}
-
-.faq summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-  border-radius: 0.9rem;
-}
-
-.faq summary:focus-visible {
-  outline: 2px solid var(--fg);
-  outline-offset: -2px;
-}
-
-.faq summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq[open] summary svg {
-  transform: rotate(180deg);
-}
-
-.faq p {
-  margin: 0;
-  padding: 0 1.25rem 1.25rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
 @media (min-width: 900px) {
   .hero { padding-top: 7.5rem; }
   .wrap { padding: 3.5rem 1.25rem; }

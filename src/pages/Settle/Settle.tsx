@@ -4,7 +4,7 @@ import DarkHero from "../../components/sections/DarkHero";
 import FeatureCards from "../../components/sections/FeatureCards";
 import SettleTransferFlow from "../../components/sections/SettleTransferFlow/SettleTransferFlow";
 import MoneyMovement from "../../components/sections/MoneyMovement/MoneyMovement";
-import SettlementVisibility from "../../components/sections/SettlementVisibility/SettlementVisibility";
+import AppDownloadPromo from "../../components/sections/AppDownloadPromo/AppDownloadPromo";
 import ExploreProducts from "../../components/sections/ExploreProducts/ExploreProducts";
 import FaqSection from "../../components/sections/FaqSection";
 import CallToAction from "../../components/sections/CallToAction";
@@ -140,7 +140,7 @@ export default function Settle() {
         </div>
       </section>
 
-      <SettlementVisibility />
+      <AppDownloadPromo product="settle" />
 
       <PricingTeaser
         product="settle"
@@ -163,7 +163,7 @@ export default function Settle() {
         secondary={null}
       />
 
-      <FaqSection items={SETTLE_FAQS} tone="tinted" />
+      <FaqSection eyebrow="FAQ" title="Common questions." items={SETTLE_FAQS} align="start" indicator="plus" />
     </>
   );
 }
