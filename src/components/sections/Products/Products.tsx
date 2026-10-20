@@ -10,7 +10,7 @@ export default function Products() {
       <div className={styles.inner}>
         <header className={styles.header}>
           <h2>Our products</h2>
-          <p>Core banking, AI and payments from one team.</p>
+          <p>Banking, AI, payments and cloud infrastructure from one team.</p>
         </header>
 
         <div className={styles.grid}>

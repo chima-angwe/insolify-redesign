@@ -1,12 +1,16 @@
 .page {
-  --ok: #15803d;
-  --bad: #b91c1c;
-  padding: 3rem 0 5rem;
+  --ok: #444444;
+  --bad: #111111;
+  padding: 7.5rem 0 5rem;
+}
+
+@media (max-width: 899px) {
+  .page { padding-top: 6.5rem; }
 }
 
 :global(.dark) .page {
-  --ok: #4ade80;
-  --bad: #f87171;
+  --ok: #d0d0d0;
+  --bad: #ffffff;
 }
 
 .inner {

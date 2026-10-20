@@ -351,9 +351,21 @@ export const PRICING: Record<PricingProduct, PricingProductData> = {
     tiers: makeTiers('Settle Africa', SETTLE_MODULES, ['platform', 'bank', 'mobile']),
     getStarted: { href: EXTERNAL_LINKS.register },
   },
+  skynet: {
+    id: 'skynet',
+    name: 'Skynet',
+    tagline: 'Cloud compute, GPU infrastructure and provisioning for modern digital services',
+    icon: 'database',
+    currency: 'USD',
+    period: 'month',
+    estimateNote: 'Configure server resources and see an illustrative monthly estimate.',
+    modules: [],
+    tiers: [],
+    getStarted: { to: '/contact' },
+  },
 }
 
-export const PRICING_ORDER: PricingProduct[] = ['fincore', 'safi', 'settle']
+export const PRICING_ORDER: PricingProduct[] = ['fincore', 'safi', 'settle', 'skynet']
 
 export const INCLUDES: { icon: IconKey; title: string; text: string }[] = [
   {

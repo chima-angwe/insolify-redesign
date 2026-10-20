@@ -1,7 +1,7 @@
 .hero {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 3rem 1.25rem 1rem;
+  padding: 6.5rem 1.25rem 1rem;
 }
 
 .hero h1 {
@@ -185,8 +185,8 @@
   color: var(--muted);
 }
 
-.ok { margin: 0; color: #15803d; font-weight: 600; }
-.err { margin: 0; color: #b91c1c; font-weight: 600; }
+.ok { margin: 0; color: var(--fg); font-weight: 600; }
+.err { margin: 0; color: var(--fg); font-weight: 600; }
 
 /* offices */
 .offices {
@@ -268,7 +268,7 @@
 }
 
 @media (min-width: 900px) {
-  .hero { padding-top: 5rem; }
+  .hero { padding-top: 7.5rem; }
   .wrap { padding: 3.5rem 1.25rem; }
   .channels { grid-template-columns: repeat(3, 1fr); }
   .row { grid-template-columns: 1fr 1fr; }

@@ -7,6 +7,8 @@ const MARKS: Record<ProductKey, { src: string; tone: 'light' | 'dark' }> = {
   fincore: { src: LOGOS.fincore, tone: 'light' },
   safi: { src: LOGOS.insolify, tone: 'dark' },
   settle: { src: LOGOS.settle, tone: 'light' },
+  // Skynet has no standalone product artwork yet; use the parent brand mark.
+  skynet: { src: LOGOS.insolify, tone: 'dark' },
 }
 
 type Props = { product: ProductKey; size?: 'sm' | 'md' | 'lg' }

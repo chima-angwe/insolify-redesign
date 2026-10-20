@@ -7,12 +7,14 @@ export type MenuItem = {
   href?: string
   product?: ProductKey
   icon?: LucideIcon
+  description?: string
 }
 
 export const PRODUCT_MENU: MenuItem[] = [
-  { label: 'Fincore', product: 'fincore', to: '/fincore' },
-  { label: 'Safi AI', product: 'safi', to: '/safi' },
-  { label: 'Settle Africa', product: 'settle', to: '/settle' },
+  { label: 'Fincore', product: 'fincore', to: '/fincore', description: 'Financial infrastructure for institutions' },
+  { label: 'Safi AI', product: 'safi', to: '/safi', description: 'Intelligence for financial teams' },
+  { label: 'Settle Africa', product: 'settle', to: '/settle', description: 'Payments across Africa' },
+  { label: 'Skynet', product: 'skynet', to: '/skynet', description: 'Cloud and GPU infrastructure' },
 ]
 
 // No Resources menu for now. Status stays reachable from the footer.

@@ -1,0 +1,53 @@
+.inner { max-width: 78rem; margin: 0 auto; padding: 0 1.5rem; }
+.audience { padding: 5rem 0 6rem; background: var(--bg); }
+.eyebrow { margin: 0; color: var(--muted); font-size: .7rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+.audienceHeading { display: flex; flex-direction: column; gap: .9rem; margin: 1rem 0 2rem; }
+.audienceHeading h2, .aboutGrid h2 { max-width: 44rem; margin: 0; font-size: clamp(2.1rem, 5vw, 3.7rem); font-weight: 500; letter-spacing: -.05em; line-height: 1.02; text-wrap: balance; }
+.audienceHeading > p, .aboutGrid > div > p { max-width: 32rem; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.audienceGrid { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.audienceCard { position: relative; min-height: 12rem; padding: 1.5rem 1.25rem 1.5rem 0; border-bottom: 1px solid var(--border); }
+.audienceCard:last-child { border-bottom: 0; }
+.audienceCard > svg { margin: 1.5rem 0 1rem; color: var(--fg); }
+.index { position: absolute; top: 1.5rem; right: .25rem; color: var(--muted); font-size: .7rem; letter-spacing: .08em; }
+.audienceCard h3 { margin: 0; font-size: 1.15rem; font-weight: 600; letter-spacing: -.02em; }
+.audienceCard p { max-width: 22rem; margin: .55rem 0 0; color: var(--muted); font-size: .92rem; line-height: 1.6; }
+.ecosystem { padding: 4rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+.ecosystemGrid { display: grid; gap: 2.5rem; align-items: center; }
+.ecosystemCopy { max-width: 34rem; }
+.ecosystemCopy h2 { margin: .8rem 0 0; font-size: clamp(2rem, 4.5vw, 3.3rem); font-weight: 500; line-height: 1.03; letter-spacing: -.05em; text-wrap: balance; }
+.ecosystemCopy > p:not(.eyebrow) { max-width: 29rem; margin: .8rem 0 0; color: var(--muted); font-size: .98rem; line-height: 1.65; }
+.ticker { min-width: 0; padding: 1rem; border: 1px solid var(--border); border-radius: .9rem; background: var(--bg); box-shadow: 0 20px 55px rgb(0 0 0 / .14); }
+.tickerHead, .tickerFoot { display: flex; justify-content: space-between; gap: .7rem; color: var(--muted); font-size: .58rem; font-weight: 600; letter-spacing: .1em; }
+.tickerWindow { height: 11.4rem; margin: .75rem 0; overflow: hidden; mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent); }
+.tickerTrack { display: flex; flex-direction: column; gap: .45rem; margin: 0; padding: 0; list-style: none; animation: ecosystemScroll 18s linear infinite; }
+.ticker:hover .tickerTrack { animation-play-state: paused; }
+.tickerTrack li { display: grid; grid-template-columns: 2.2rem 1fr 1.1rem; align-items: center; gap: .75rem; min-height: 3.45rem; padding: 0 .8rem; border: 1px solid var(--border); border-radius: .55rem; background: color-mix(in srgb, var(--surface) 70%, var(--bg)); transition: border-color .2s, transform .2s; }
+.tickerTrack li:hover { transform: translateX(3px); border-color: #777; }
+.tickerTrack strong { font-size: .87rem; font-weight: 550; }
+.tickerTrack svg { color: var(--muted); }
+.connectionNumber { color: var(--muted); font-size: .63rem; font-variant-numeric: tabular-nums; }
+.tickerFoot { padding-top: .7rem; border-top: 1px solid var(--border); font-size: .56rem; }
+.tickerFoot > span:first-child { display: inline-flex; align-items: center; gap: .45rem; }
+.tickerFoot i { width: .38rem; height: .38rem; border-radius: 50%; background: #ddd; box-shadow: 0 0 0 .22rem rgb(255 255 255 / .07); }
+@keyframes ecosystemScroll { to { transform: translateY(-50%); } }
+.textLink { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.4rem; color: var(--fg); font-size: .9rem; font-weight: 600; text-decoration: none; }
+.textLink svg { transition: transform .2s; }
+.textLink:hover svg { transform: translateX(3px); }
+.about { padding: 5rem 0; }
+.aboutGrid { display: grid; gap: 1.25rem; margin-top: 1rem; }
+.aboutGrid > div > p { margin-bottom: .2rem; }
+@media (min-width: 700px) {
+  .audience { padding: 6rem 0 7rem; }
+  .audienceHeading { flex-direction: row; align-items: end; justify-content: space-between; }
+  .audienceHeading > p { padding-bottom: .25rem; }
+  .audienceGrid { grid-template-columns: repeat(3, 1fr); }
+  .audienceCard { min-height: 14rem; padding: 1.5rem; border-right: 1px solid var(--border); border-bottom: 0; }
+  .audienceCard:first-child { padding-left: 0; }
+  .audienceCard:last-child { border-right: 0; }
+  .index { right: 1.25rem; }
+  .about { padding: 6rem 0; }
+  .aboutGrid { grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: end; }
+  .aboutGrid > div { padding-bottom: .3rem; }
+}
+@media (min-width: 900px) { .ecosystem { padding: 5.5rem 0; } .ecosystemGrid { grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 8vw, 8rem); } }
+@media (prefers-reduced-motion: reduce) { .tickerTrack { animation: none; } .loopItem { display: none; } .tickerTrack li { transition: none; } }

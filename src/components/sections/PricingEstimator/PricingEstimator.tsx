@@ -4,11 +4,28 @@ import { ICONS } from "../../../lib/icons";
 import { formatMoney } from "../../../lib/format";
 import type { PricingProductData } from "../../../data/pricing";
 import ProductMark from "../../ui/ProductMark";
+import SkynetConfigurator from "../SkynetConfigurator/SkynetConfigurator";
 import styles from "./PricingEstimator.module.css";
 
 type Props = { product: PricingProductData };
 
 export default function PricingEstimator({ product }: Props) {
+  if (product.id === 'skynet') {
+    return <>
+      <section className={styles.section} aria-label="Skynet pricing">
+        <header className={styles.head}>
+          <ProductMark product="skynet" size="lg" />
+          <div><h2>{product.name}</h2><p>{product.tagline}</p></div>
+        </header>
+      </section>
+      <SkynetConfigurator showAssistant={false} />
+    </>
+  }
+
+  return <ModulePricingEstimator product={product} />
+}
+
+function ModulePricingEstimator({ product }: Props) {
   const { currency, period, modules } = product;
   const monthly = period === "month";
   const suffix = monthly ? "/mo" : "/yr";

@@ -38,15 +38,12 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.8;
-  transition: filter 0.2s, opacity 0.2s;
-}
-
-.slot img:hover {
   filter: none;
   opacity: 1;
+  transition: opacity 0.2s, transform 0.2s;
 }
+
+.slot img:hover { opacity: .88; transform: scale(1.04) !important; }
 
 :global(.dark) .slot {
   padding: 0.5rem 0.9rem;

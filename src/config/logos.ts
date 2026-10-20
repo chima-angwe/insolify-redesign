@@ -1,4 +1,4 @@
-export type ProductKey = 'fincore' | 'safi' | 'settle'
+export type ProductKey = 'fincore' | 'safi' | 'settle' | 'skynet'
 
 // Files live in public/logos/. If one is a .png, change its extension here.
 export const LOGOS = {

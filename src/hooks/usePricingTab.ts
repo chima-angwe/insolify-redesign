@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router'
 
-const TABS = ['fincore', 'safi', 'settle'] as const
+const TABS = ['fincore', 'safi', 'settle', 'skynet'] as const
 export type PricingTab = (typeof TABS)[number]
 
 export function usePricingTab() {

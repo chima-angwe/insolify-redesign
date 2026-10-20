@@ -21,7 +21,10 @@ function MenuLink({ item, onClick }: { item: MenuItem; onClick: () => void }) {
       ) : (
         <span className={styles.tile}>{Icon && <Icon size={16} aria-hidden="true" />}</span>
       )}
-      {item.label}
+      <span className={styles.menuCopy}>
+        <strong>{item.label}</strong>
+        {item.description && <small>{item.description}</small>}
+      </span>
     </>
   )
 

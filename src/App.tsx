@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Fincore from './pages/Fincore'
 import Safi from './pages/Safi'
 import Settle from './pages/Settle'
+import Skynet from './pages/Skynet'
 import Pricing from './pages/Pricing'
 import About from './pages/About'
 import Track from './pages/Track'
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="fincore" element={<Fincore />} />
           <Route path="safi" element={<Safi />} />
           <Route path="settle" element={<Settle />} />
+          <Route path="skynet" element={<Skynet />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about" element={<About />} />
           <Route path="track" element={<Track />} />

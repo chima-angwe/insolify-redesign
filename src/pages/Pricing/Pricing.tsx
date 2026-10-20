@@ -22,7 +22,7 @@ export default function Pricing() {
 
       {/* key resets the checked modules and billing toggle when the product changes */}
       <PricingEstimator key={product.id} product={product} />
-      <PricingPlans product={product} />
+      {product.tiers.length > 0 && <PricingPlans product={product} />}
       <PricingIncludes />
       <PricingFaq />
     </>

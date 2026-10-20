@@ -1,7 +1,15 @@
 import { Link } from "react-router";
+import { ArrowLeftRight, CreditCard, Globe2, ShieldCheck } from "lucide-react";
 import { FOOTER_GROUPS, TRUST_POINTS } from "../../../config/links";
 import styles from "./Footer.module.css";
 import Logo from "../../ui/Logo";
+
+const BADGES = [
+  { icon: CreditCard, name: 'PCI DSS', description: 'Payment card security' },
+  { icon: ArrowLeftRight, name: 'ISO 8583', description: 'Financial messaging' },
+  { icon: ShieldCheck, name: 'ISO/IEC 27001', description: 'Information security' },
+  { icon: Globe2, name: 'GDPR', description: 'Data protection' },
+];
 
 export default function Footer() {
   return (
@@ -32,6 +40,15 @@ export default function Footer() {
             </div>
           ))}
         </div>
+
+        <ul className={styles.badges} aria-label="Security and financial standards">
+          {BADGES.map(({ icon: Icon, name, description }) => (
+            <li className={styles.badge} key={name}>
+              <Icon size={21} strokeWidth={1.7} aria-hidden="true" />
+              <span><strong>{name}</strong><small>{description}</small></span>
+            </li>
+          ))}
+        </ul>
 
         <p className={styles.copy}>
           © {new Date().getFullYear()} Insolify. All rights reserved.

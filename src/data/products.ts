@@ -1,5 +1,5 @@
 export type Product = {
-  id: 'fincore' | 'safi' | 'settle'
+  id: 'fincore' | 'safi' | 'settle' | 'skynet'
   name: string
   category: string
   description: string
@@ -37,5 +37,12 @@ export const PRODUCTS: Product[] = [
     category: 'Money transfers',
     description: 'Fast, secure transfers across Africa and beyond.',
     to: '/settle',
+  },
+  {
+    id: 'skynet',
+    name: 'Skynet',
+    category: 'Cloud infrastructure',
+    description: 'Cloud compute, GPU infrastructure and provisioning for modern digital services.',
+    to: '/skynet',
   },
 ]

@@ -4,7 +4,7 @@ import styles from './LogoStrip.module.css'
 export default function LogoStrip() {
   return (
     <section className={styles.strip} aria-label="Our clients">
-      <p className={styles.label}>Trusted by</p>
+      <p className={styles.label}>In business with reputable brands</p>
       <ul className={styles.list}>
         {CLIENTS.map((c) => (
           <li key={c.name} className={styles.slot}>

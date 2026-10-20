@@ -1,119 +1,20 @@
-.strip {
-  overflow: hidden;
-  margin-top: 3.5rem;
-  padding: 0.75rem 0 1rem;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent);
-  mask-image: linear-gradient(to right, transparent, #000 3rem, #000 calc(100% - 3rem), transparent);
-}
-
-.track {
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
-  width: max-content;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  animation: marquee 70s linear infinite;
-}
-
-.strip:hover .track,
-.strip:focus-within .track {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(calc(-100% / 3 - 0.34rem));
-  }
-}
-
-.card {
-  display: flex;
-  flex: 0 0 15.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.75rem;
-  min-height: var(--h, 12rem);
-  padding: 1.25rem;
-  border-radius: 1.1rem;
-  animation: cardIn 0.8s calc(var(--i) * 90ms + 0.5s) cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
-  transition: transform 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(44px);
-  }
-}
-
-.label {
-  margin: 0;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
-
-.art {
-  display: flex;
-  flex: 1;
-  align-items: center;
-}
-
-.art svg {
-  width: 4.75rem;
-}
-
-.card h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-.text {
-  margin: 0.35rem 0 0;
-  font-size: 0.88rem;
-  opacity: 0.8;
-}
-
-.yellow {
-  background: var(--accent);
-  color: var(--accent-fg);
-}
-
-.light {
-  background: #f4f4f2;
-  color: #0a0a0a;
-}
-
-.dark {
-  background: #1b1b1b;
-  border: 1px solid #2e2e2e;
-  color: #fff;
-}
-
-.dark .art {
-  color: var(--accent);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .strip {
-    overflow-x: auto;
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-  .track {
-    animation: none;
-  }
-  .dup {
-    display: none;
-  }
-}
+.strip { overflow: hidden; margin-top: 4rem; padding: 1rem 0 1.25rem; -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent); mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent); }
+.track { display: flex; align-items: stretch; gap: .85rem; width: max-content; margin: 0; padding: 0; list-style: none; animation: marquee 80s linear infinite; }
+.strip:hover .track, .strip:focus-within .track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-100% / 3 - .3rem)); } }
+.card { position: relative; display: flex; flex: 0 0 17rem; flex-direction: column; justify-content: space-between; gap: .75rem; min-height: var(--h, 13rem); padding: 1.2rem 1.35rem; border: 1px solid #383838; border-radius: .75rem; background: #1b1b1b; color: #f3f3f3; animation: cardIn .8s calc(var(--i) * 70ms + .45s) cubic-bezier(.2,.7,.2,1) backwards; transition: transform .25s ease, border-color .25s ease; }
+.card:hover { transform: translateY(-5px); border-color: #8a8a8a; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(30px); } }
+.label { margin: 0; color: #b8b8b8; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.art { display: flex; flex: 1; align-items: center; color: #dedede; }
+.art svg { width: 3.5rem; height: 3.5rem; stroke-width: 1.25; }
+.card h2 { margin: 0; font-size: 1.32rem; font-weight: 500; letter-spacing: -.025em; line-height: 1.1; }
+.text { max-width: 16rem; margin: .35rem 0 0; color: #b9b9b9; font-size: .84rem; line-height: 1.45; }
+.yellow, .light, .dark { background: #1b1b1b; color: #f3f3f3; }
+.yellow { background: #292929; border-color: #555; }
+.yellow .label, .yellow .text { color: #d0d0d0; }
+.yellow .art { color: #f0f0f0; }
+.light { background: #303030; border-color: #484848; }
+.dark { background: #1b1b1b; }
+.dark .art { color: #c2c2c2; }
+@media (prefers-reduced-motion: reduce) { .strip { overflow-x: auto; -webkit-mask-image: none; mask-image: none; } .track { animation: none; } .dup { display: none; } .card { animation: none; } }

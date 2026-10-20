@@ -1,0 +1,138 @@
+.section {
+  padding: 4.5rem 0;
+  background: var(--bg);
+}
+
+.inner {
+  width: min(100% - 2.5rem, 64rem);
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  max-width: 46rem;
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.voicePanel {
+  display: flex;
+  min-height: 12.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+}
+
+.waveform {
+  display: flex;
+  height: 4.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32rem;
+}
+
+.waveBar {
+  width: 0.34rem;
+  height: var(--bar-height);
+  border-radius: 999px;
+  background: currentColor;
+  color: var(--text, #f5f5f5);
+  opacity: 0.85;
+  animation: pulse 1.15s ease-in-out infinite alternate;
+  animation-delay: var(--bar-delay);
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.languages li {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.capabilities {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  min-height: 9rem;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+}
+
+.card > svg {
+  margin-bottom: 0.7rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+@keyframes pulse {
+  from { transform: scaleY(0.58); opacity: 0.55; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+@media (min-width: 700px) {
+  .capabilities { grid-template-columns: repeat(3, 1fr); }
+  .card { min-height: 10rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waveBar { animation: none; }
+}
+
+@media (min-width: 1000px) {
+  .section { padding: 6rem 0; }
+}

@@ -1,5 +1,5 @@
 .hero {
-  padding: 4rem 0;
+  padding: 6.5rem 0 4rem;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
@@ -37,6 +37,6 @@
 
 @media (min-width: 900px) {
   .hero {
-    padding: 6rem 0;
+    padding: 7.5rem 0 5rem;
   }
 }

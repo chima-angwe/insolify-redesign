@@ -2,8 +2,7 @@ import { Fragment } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { ArrowRight } from 'lucide-react'
 import Button from '../../ui/Button'
-import StripCards from '../StripCards'
-import type { StripCard } from '../StripCards/StripCards'
+import ProductHeroArt from '../ProductHeroArt/ProductHeroArt'
 import styles from './DarkHero.module.css'
 
 type Action = { label: string; to?: string; href?: string }
@@ -15,7 +14,6 @@ type Props = {
   text: string
   primary: Action
   secondary?: Action
-  cards: StripCard[]
   compact?: boolean
 }
 
@@ -26,11 +24,12 @@ export default function DarkHero({
   text,
   primary,
   secondary,
-  cards,
   compact = false,
 }: Props) {
+  const productTone = name === 'Fincore' ? styles.fincore : name === 'Safi AI' ? styles.safi : name === 'Settle Africa' ? styles.settle : name === 'Skynet' ? styles.skynet : styles.home
+
   return (
-    <section className={`${styles.hero} ${compact ? styles.compact : ''}`}>
+    <section className={`${styles.hero} ${productTone} ${compact ? styles.compact : ''}`}>
       <div className={styles.inner}>
         {mark && (
           <p className={styles.brand}>
@@ -63,7 +62,7 @@ export default function DarkHero({
         </div>
       </div>
 
-      <StripCards cards={cards} />
+      {name && <div className={styles.artWrap}><ProductHeroArt product={name} /></div>}
     </section>
   )
 }

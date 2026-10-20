@@ -4,7 +4,7 @@ export const EXTERNAL_LINKS = {
   account: 'https://dash.insolify.com', // TODO: confirm the real login URL
   registerSafi: 'https://dash.insolify.com/register?product=safiai',
   registerSettle: 'https://dash.insolify.com/register', // TODO: use a Settle-specific link if one exists
-  docs: 'https://docs.insolify.com/', // TODO: paste the Documentation link (hover it on the live site and copy the address)
+  docs: 'https://blog.insolify.com/developers.html',
 }
 
 export const NAV_LINKS = [
@@ -23,6 +23,7 @@ export const FOOTER_GROUPS = [
       { label: 'Fincore', to: '/fincore' },
       { label: 'Safi AI', to: '/safi' },
       { label: 'Settle Africa', to: '/settle' },
+      { label: 'Skynet', to: '/skynet' },
     ],
   },
   {
@@ -63,7 +64,7 @@ export const CONTACT = {
   formEndpoint: '', // TODO: ask Ibrahim where the live form posts
 }
 
-export type PricingProduct = 'fincore' | 'safi' | 'settle'
+export type PricingProduct = 'fincore' | 'safi' | 'settle' | 'skynet'
 
 // Opens the Pricing page with the right product tab selected
 export const pricingLink = (product: PricingProduct) => `/pricing?product=${product}`

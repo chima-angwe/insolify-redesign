@@ -1,0 +1,15 @@
+.section { padding: 4rem 0; background: var(--bg); }
+.inner { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem; }
+.header { margin-bottom: 1.5rem; }
+.eyebrow { margin: 0 0 .6rem; color: var(--muted); font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.header h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.65rem); letter-spacing: -.035em; line-height: 1.12; }
+.header > p:last-child { margin: .55rem 0 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: 1fr; gap: .9rem; }
+.card { min-height: 9.2rem; padding: 1.3rem; border: 1px solid var(--border); border-radius: .9rem; background: var(--surface); animation: rise .55s both; animation-delay: calc(var(--card-index, 0) * 70ms); }
+.icon { display: inline-flex; margin-bottom: .7rem; }
+.card h3 { margin: 0; font-size: 1.08rem; font-weight: 600; }
+.card p { margin: .35rem 0 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 620px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 980px) { .section { padding: 5rem 0; } .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .card { animation: none; } }

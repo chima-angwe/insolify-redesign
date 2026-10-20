@@ -1,5 +1,9 @@
 .section {
-  padding: 3rem 0 5rem;
+  padding: 7.5rem 0 5rem;
+}
+
+@media (max-width: 899px) {
+  .section { padding-top: 6.5rem; }
 }
 
 .inner {
@@ -109,7 +113,7 @@
 
 .err {
   margin: 0.75rem 0 0;
-  color: #b91c1c;
+  color: var(--fg);
   font-weight: 600;
 }
 

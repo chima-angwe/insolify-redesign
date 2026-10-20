@@ -1,161 +1,30 @@
-.section {
-  padding: 4rem 0;
-}
-
-.inner {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.header {
-  margin-bottom: 2.5rem;
-}
-
-.header h2 {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-}
-
-.header p {
-  margin: 0.75rem 0 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.card {
-  --c-fg: var(--fg);
-  --c-muted: var(--muted);
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
-  background: var(--surface);
-  color: var(--c-fg);
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 40px -22px rgb(0 0 0 / 0.4);
-}
-
-.card:focus-visible {
-  outline: 2px solid var(--fg);
-  outline-offset: 3px;
-}
-
-.featured {
-  --c-fg: var(--accent-fg);
-  --c-muted: color-mix(in srgb, var(--accent-fg) 72%, transparent);
-  background: var(--accent);
-}
-
-.card:nth-child(2) {
-  --c-fg: #fff;
-  --c-muted: #b3b3b3;
-  background: #1b1b1b;
-  border: 1px solid #2e2e2e;
-}
-
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.25rem;
-}
-
-.tag {
-  padding: 0.25rem 0.7rem;
-  border-radius: 9999px;
-  background: #0a0a0a;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.category {
-  margin: 0;
-  color: var(--c-muted);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.name {
-  margin: 0.35rem 0 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.featured .name {
-  font-size: 2.1rem;
-}
-
-.desc {
-  margin: 0.75rem 0 0;
-  color: var(--c-muted);
-  line-height: 1.6;
-}
-
-.points {
-  display: grid;
-  gap: 0.6rem;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.points li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--c-fg);
-  font-size: 0.95rem;
-}
-
-.points svg {
-  flex-shrink: 0;
-}
-
-.more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: auto;
-  padding-top: 1.5rem;
-  font-weight: 600;
-}
-
-.more svg {
-  transition: transform 0.2s;
-}
-
-.card:hover .more svg {
-  transform: translateX(4px);
-}
-
-@media (min-width: 900px) {
-  .section {
-    padding: 6rem 0;
-  }
-  .grid {
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  .featured {
-    grid-row: 1 / span 2;
-    padding: 2rem;
-  }
-}
+.section { position: relative; padding: 5.5rem 0 6rem; }
+.inner { max-width: 78rem; margin: 0 auto; padding: 0 1.5rem; }
+.header { display: flex; flex-direction: column; gap: .8rem; align-items: flex-start; margin-bottom: 2rem; }
+.header h2 { margin: 0; max-width: 48rem; font-size: clamp(2.25rem, 5vw, 4.1rem); font-weight: 500; line-height: 1; letter-spacing: -.055em; text-wrap: balance; }
+.header h2::before { content: "THE INSOLIFY SUITE /"; display: block; margin-bottom: 1rem; color: var(--muted); font: 600 .72rem/1 "Inter Variable", sans-serif; letter-spacing: .16em; }
+.header p { margin: 0; color: var(--muted); font-size: 1.02rem; }
+.grid { display: grid; gap: 1rem; }
+.card { --c-fg: #f4f4f4; --c-muted: #bdbdbd; position: relative; isolation: isolate; display: flex; min-height: 19rem; flex-direction: column; overflow: hidden; padding: 1.5rem; border: 1px solid #383838; border-radius: .85rem; background: #1b1b1b; color: var(--c-fg); text-decoration: none; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.card::after { content: ""; position: absolute; z-index: -1; width: 15rem; height: 15rem; right: -5rem; bottom: -7rem; border: 1px solid rgb(255 255 255 / .2); border-radius: 50%; box-shadow: 0 0 0 1.5rem rgb(255 255 255 / .025), 0 0 0 3rem rgb(255 255 255 / .02); transition: transform .4s ease; }
+.card:hover { transform: translateY(-4px); border-color: #888; box-shadow: 0 20px 40px rgb(0 0 0 / .14); }
+.card:hover::after { transform: scale(1.14); }
+.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.featured { --c-fg: #fff; --c-muted: #ccc; background: #111; border-color: #555; }
+.featured::after { width: 21rem; height: 21rem; right: -4rem; bottom: -11rem; border-color: rgb(255 255 255 / .4); box-shadow: 0 0 0 1.5rem rgb(255 255 255 / .05), 0 0 0 3rem rgb(255 255 255 / .04), 0 0 0 5rem rgb(255 255 255 / .03); }
+.card:nth-child(2) { --c-fg: #f4f4f4; --c-muted: #bdbdbd; border: 1px solid #383838; background: #1b1b1b; }
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: auto; }
+.tag { padding: .38rem .7rem; border: 1px solid rgb(255 255 255 / .3); border-radius: 999px; color: #fff; font-size: .7rem; font-weight: 600; letter-spacing: .03em; }
+.category { margin: 2.5rem 0 0; color: var(--c-muted); font-size: .7rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.name { margin: .4rem 0 0; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 500; letter-spacing: -.045em; }
+.featured .name { font-size: clamp(2.25rem, 4.2vw, 3.6rem); }
+.desc { max-width: 31rem; margin: .7rem 0 0; color: var(--c-muted); line-height: 1.65; }
+.points { display: grid; gap: .5rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+.points li { display: flex; align-items: center; gap: .55rem; color: var(--c-fg); font-size: .9rem; }
+.points svg { flex-shrink: 0; color: inherit; }
+.more { display: inline-flex; align-items: center; gap: .5rem; margin-top: auto; padding-top: 1.4rem; color: #d0d0d0; font-weight: 600; }
+.featured .more { color: #fff; }
+.more svg { transition: transform .2s; }
+.card:hover .more svg { transform: translateX(4px); }
+@media (min-width: 700px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .featured { grid-row: auto; } }
+@media (min-width: 1050px) { .section { padding: 7rem 0; } .header { flex-direction: row; align-items: flex-end; justify-content: space-between; } .header p { max-width: 22rem; padding-bottom: .3rem; } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; } .card { min-height: 22rem; padding: 1.8rem; } .featured { grid-row: auto; min-height: 22rem; } .featured .name { font-size: clamp(1.8rem, 3vw, 2.5rem); } }
