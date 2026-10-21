@@ -1,4 +1,5 @@
 import { usePricingTab } from '../../hooks/usePricingTab'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import { PRICING } from '../../data/pricing'
 import PricingTabs from '../../components/sections/PricingTabs'
 import PricingEstimator from '../../components/sections/PricingEstimator'
@@ -14,7 +15,7 @@ export default function Pricing() {
   return (
     <>
       <section className={styles.intro}>
-        <h1>Pricing</h1>
+        <DisplayHeroHeading headline="Pricing" />
         <p>Choose a ready-made plan or build your own estimate, one product at a time.</p>
       </section>
 

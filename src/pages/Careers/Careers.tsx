@@ -10,6 +10,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { Link } from 'react-router'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './Careers.module.css'
 
 const LOCATIONS = [
@@ -55,7 +56,7 @@ export default function Careers() {
       <section className={styles.hero} aria-labelledby="careers-title">
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Careers at Insolify</p>
-          <h1 id="careers-title">Build what’s next in financial technology.</h1>
+          <DisplayHeroHeading id="careers-title" headline="Build what’s next in financial technology." />
           <p className={styles.heroText}>
             Join people working on the technology underneath modern financial services—from
             financial platforms and AI to payments and infrastructure.

@@ -1,7 +1,6 @@
 .page { padding-bottom: 5rem; background: var(--bg); color: var(--fg); }
 .hero { padding: 8rem 1.25rem 4rem; text-align: center; }
 .eyebrow { margin: 0 0 .55rem; color: #9fc5df; font-size: .73rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-.hero h1 { margin: 0; font-size: clamp(2.45rem, 5vw, 3.45rem); font-weight: 500; letter-spacing: -.04em; }
 .hero > p:last-child { margin: .65rem auto 0; color: var(--muted); font-size: 1rem; line-height: 1.6; }
 .content { width: min(100% - 2.5rem, 68rem); margin: 0 auto; }
 .overall { display: flex; align-items: center; gap: .9rem; padding: 1.2rem 1.35rem; border: 1px solid #15743f; border-radius: .9rem; background: color-mix(in srgb, #0b5b2d 17%, var(--bg)); }
@@ -85,7 +84,7 @@
 }
 @media (max-width: 520px) {
   .hero { padding: 7rem 1.1rem 3rem; }
-  .content { width: min(100% - 2rem, 68rem); }
+  .content { width: min(100% - 2.2rem, 68rem); }
   .overall { align-items: flex-start; flex-wrap: wrap; }
   .overall time { width: 100%; margin: .2rem 0 0 3.15rem; }
   .sectionTitle { align-items: flex-start; flex-direction: column; }

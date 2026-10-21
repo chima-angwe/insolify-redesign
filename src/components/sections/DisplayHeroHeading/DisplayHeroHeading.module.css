@@ -1,0 +1,22 @@
+.heading {
+  max-width: 62rem;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7.8vw, 6rem);
+  font-weight: 540;
+  line-height: .99;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.word { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .045em .1em 0; margin-bottom: -.1em; }
+.word > span { display: inline-block; animation: wordUp .8s calc(var(--n) * 36ms + 80ms) cubic-bezier(.2,.7,.2,1) backwards; }
+.word:nth-of-type(3n) > span { color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-style: italic; letter-spacing: -.065em; }
+
+@keyframes wordUp { from { transform: translateY(105%); } }
+
+@media (max-width: 680px) {
+  .heading { font-size: clamp(2.8rem, 10.5vw, 4rem); }
+}
+
+@media (prefers-reduced-motion: reduce) { .word > span { animation: none; } }

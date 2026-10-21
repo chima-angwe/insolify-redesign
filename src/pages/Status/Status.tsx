@@ -1,4 +1,5 @@
 import { ArrowLeftRight, Check, Cloud, Landmark, Sparkles } from 'lucide-react'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './Status.module.css'
 
 type ServiceSnapshot = {
@@ -151,7 +152,7 @@ export default function Status() {
     <div className={styles.page}>
       <section className={styles.hero} aria-labelledby="status-title">
         <p className={styles.eyebrow}>System status</p>
-        <h1 id="status-title">Platform health and uptime.</h1>
+        <DisplayHeroHeading id="status-title" headline="Platform health and uptime." />
         <p>Availability, latency, incidents and logs for FinCore, Safi, Skynet and Settle.</p>
       </section>
 

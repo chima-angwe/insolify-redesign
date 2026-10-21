@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowRight, Cloud, Cpu, Landmark, Smartphone, WalletCards, Workflow } from 'lucide-react'
 import { Link } from 'react-router'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './Developers.module.css'
 
 const BUILD_AREAS = [
@@ -24,7 +25,7 @@ export default function Developers() {
     <div className={styles.page}>
       <section className={styles.hero} aria-labelledby="developers-title">
         <p className={styles.eyebrow}>Developers</p>
-        <h1 id="developers-title">Build on infrastructure for modern finance.</h1>
+        <DisplayHeroHeading id="developers-title" headline="Build on infrastructure for modern finance." />
         <p>Connect financial products, applications and services through Insolify APIs and integrations.</p>
         <div className={styles.integrationDiagram} role="img" aria-label="An integration hub connects FinCore, Safi, Skynet, and customer applications">
           <svg className={styles.connections} viewBox="0 0 640 250" aria-hidden="true">

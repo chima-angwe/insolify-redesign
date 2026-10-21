@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { TRACKING } from '../../config/links'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './Track.module.css'
 
 type Mode = 'id' | 'receipt'
@@ -85,7 +86,7 @@ export default function Track() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h1>Track any transfer</h1>
+        <DisplayHeroHeading headline="Track any transfer" />
         <p className={styles.lead}>
           Look up settlement status using a transaction reference, or upload the receipt and we will
           match it for you.

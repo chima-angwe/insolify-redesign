@@ -12,12 +12,7 @@
   padding: 0 1.25rem;
 }
 
-.inner h1 {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
+.inner h1 { margin-left: 0; margin-right: 0; }
 
 .lead {
   margin: 1rem 0 0;

@@ -1,6 +1,7 @@
 import { ArrowRight, Cloud, Cpu, Landmark, WalletCards } from 'lucide-react'
 import { Link } from 'react-router'
 import FaqSection from '../../components/sections/FaqSection'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './About.module.css'
 
 const PLATFORMS = [
@@ -40,7 +41,7 @@ export default function About() {
       <section className={styles.hero} aria-labelledby="company-title">
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>About Insolify</p>
-          <h1 id="company-title">Building the infrastructure behind modern finance.</h1>
+          <DisplayHeroHeading id="company-title" headline="Building the infrastructure behind modern finance." />
           <p className={styles.heroText}>
             Insolify is a financial technology and infrastructure company building the technology
             underneath modern financial services.

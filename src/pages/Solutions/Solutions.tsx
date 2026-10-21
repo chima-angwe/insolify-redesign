@@ -1,6 +1,7 @@
 import { ArrowRight, Cloud, Cpu, Landmark, WalletCards } from 'lucide-react'
 import { Link } from 'react-router'
 import FaqSection from '../../components/sections/FaqSection'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import styles from './Solutions.module.css'
 
 const AUDIENCES = [
@@ -36,7 +37,7 @@ export default function Solutions() {
     <div className={styles.page}>
       <section className={styles.hero} aria-labelledby="solutions-title">
         <p className={styles.eyebrow}>Solutions</p>
-        <h1 id="solutions-title">Technology shaped around your next move.</h1>
+        <DisplayHeroHeading id="solutions-title" headline="Technology shaped around your next move." />
         <p>Financial and infrastructure platforms for the teams building modern services.</p>
         <Link className={styles.primaryButton} to="/contact">Talk through your goals <ArrowRight size={17} aria-hidden="true" /></Link>
       </section>

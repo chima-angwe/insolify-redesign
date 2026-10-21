@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 import { useLocation } from 'react-router'
 import { Mail, CalendarDays, MapPin } from 'lucide-react'
 import Button from '../../components/ui/Button'
+import DisplayHeroHeading from '../../components/sections/DisplayHeroHeading/DisplayHeroHeading'
 import FaqItem from '../../components/sections/FaqSection/FaqItem'
 import { CONTACT } from '../../config/links'
 import { SUBJECTS, OFFICES, FAQS } from '../../data/contact'
@@ -63,7 +64,7 @@ export default function Contact() {
   return (
     <>
       <section className={styles.hero}>
-        <h1>Get in touch</h1>
+        <DisplayHeroHeading headline="Get in touch" />
         <p>Book a demo, ask a question or explore a partnership. We would like to hear from you.</p>
       </section>
 
