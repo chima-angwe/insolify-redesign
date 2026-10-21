@@ -40,9 +40,9 @@ export const FOOTER_GROUPS: FooterGroup[] = [
   {
     title: 'Developers',
     links: [
-      { label: 'Documentation', to: '/contact' },
-      { label: 'APIs', to: '/contact' },
-      { label: 'Integrations', to: '/contact' },
+      { label: 'Documentation', to: '/developers#documentation' },
+      { label: 'APIs', to: '/developers#apis' },
+      { label: 'Integrations', to: '/developers#integrations' },
       { label: 'System status', to: '/status' },
       { label: 'Verify a transfer', to: '/track' },
     ],

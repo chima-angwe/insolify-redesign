@@ -14,6 +14,7 @@ import Status from './pages/Status'
 import Privacy from './pages/Privacy'
 import Legacy from './pages/Legacy'
 import Contact from './pages/Contact'
+import Developers from './pages/Developers'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="solutions" element={<Solutions />} />
           <Route path="careers" element={<Careers />} />
+          <Route path="developers" element={<Developers />} />
           <Route path="track" element={<Track />} />
           <Route path="status" element={<Status />} />
           <Route path="privacy" element={<Privacy />} />
