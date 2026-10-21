@@ -1,7 +1,7 @@
 .header {
   position: sticky; top: 0; z-index: 50; max-width: 80rem; margin: 0 auto -5rem; transform: translateY(.8rem);
   width: calc(100% - 2.5rem); border: 1px solid #363636; border-radius: 1rem;
-  background: rgb(16 16 16 / .96); color: #f5f5f5; backdrop-filter: blur(18px);
+  background: rgb(7 7 7 / .96); color: #f5f5f5; backdrop-filter: blur(18px);
   box-shadow: 0 14px 36px rgb(0 0 0 / .2);
 }
 .inner { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem; min-height: 4.4rem; display: flex; align-items: center; gap: 1.5rem; }
@@ -16,10 +16,10 @@
 .flip { transform: rotate(180deg); }
 .dropdown { position: relative; }
 .panelWrap { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: .65rem; z-index: 60; }
-.panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; width: min(36rem, calc(100vw - 2rem)); padding: .7rem; border: 1px solid #363636; border-radius: .9rem; background: #1b1b1b; box-shadow: 0 18px 40px rgb(0 0 0 / .3); animation: pop .12s ease-out; }
+.panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem; width: min(36rem, calc(100vw - 2rem)); padding: .7rem; border: 1px solid #2b2b2b; border-radius: .9rem; background: #121212; box-shadow: 0 18px 40px rgb(0 0 0 / .3); animation: pop .12s ease-out; }
 @keyframes pop { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .menuLink { display: flex; align-items: flex-start; gap: .75rem; min-height: 5.7rem; padding: .9rem; border: 1px solid transparent; border-radius: .65rem; color: #f3f3f3; font-size: .92rem; font-weight: 500; text-decoration: none; transition: background .2s, border-color .2s, transform .2s; }
-.menuLink:hover { border-color: #414141; background: #252525; transform: translateY(-2px); }
+.menuLink:hover { border-color: #383838; background: #1a1a1a; transform: translateY(-2px); }
 .menuCopy { display: grid; gap: .35rem; padding-top: .1rem; }
 .menuCopy strong { font-size: .92rem; }
 .menuCopy small { color: #a7a7a7; font-size: .78rem; line-height: 1.45; }
