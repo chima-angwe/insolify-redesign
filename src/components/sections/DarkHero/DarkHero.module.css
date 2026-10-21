@@ -1,24 +1,23 @@
 .hero {
-  --fg: #f5f5f5; --bg: #101010; --muted: #b3b3b3; --border: #383838; --surface: #1b1b1b; --accent: #fff; --accent-fg: #101010;
   position: relative; isolation: isolate; overflow: hidden; padding: 9rem 0 3.5rem;
-  background: radial-gradient(ellipse at 76% 22%, rgb(255 255 255 / .09), transparent 32%),
-    radial-gradient(ellipse at 18% 100%, rgb(255 255 255 / .035), transparent 36%), #101010; color: var(--fg);
+  background: radial-gradient(ellipse at 76% 22%, color-mix(in srgb, var(--fg) 9%, transparent), transparent 32%),
+    radial-gradient(ellipse at 18% 100%, color-mix(in srgb, var(--fg) 4%, transparent), transparent 36%), var(--bg); color: var(--fg);
 }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .22; pointer-events: none;
-  background-image: radial-gradient(circle, #a7a7a7 1px, transparent 1.5px); background-size: 30px 30px;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--fg) 35%, transparent) 1px, transparent 1.5px); background-size: 30px 30px;
   mask-image: linear-gradient(transparent 18%, #000 70%, #000);
 }
-.hero::after { content: ""; position: absolute; z-index: -1; width: 32rem; height: 32rem; top: 6rem; right: -18rem; border: 1px solid rgb(255 255 255 / .16); border-radius: 50%; box-shadow: 0 0 0 3rem rgb(255 255 255 / .025), 0 0 0 6rem rgb(255 255 255 / .02); }
-.skynet { background: radial-gradient(ellipse at 24% 18%, rgb(255 255 255 / .075), transparent 34%), radial-gradient(ellipse at 82% 92%, rgb(255 255 255 / .04), transparent 32%), #101010; }
-.home .inner::before { content: "FINANCIAL TECHNOLOGY / BUILT IN AFRICA"; display: block; margin: 0 auto 1.4rem; color: #bdbdbd; font-size: .72rem; font-weight: 600; letter-spacing: .18em; }
+.hero::after { content: ""; position: absolute; z-index: -1; width: 32rem; height: 32rem; top: 6rem; right: -18rem; border: 1px solid color-mix(in srgb, var(--fg) 16%, transparent); border-radius: 50%; box-shadow: 0 0 0 3rem color-mix(in srgb, var(--fg) 3%, transparent), 0 0 0 6rem color-mix(in srgb, var(--fg) 2%, transparent); }
+.skynet { background: radial-gradient(ellipse at 24% 18%, color-mix(in srgb, var(--fg) 8%, transparent), transparent 34%), radial-gradient(ellipse at 82% 92%, color-mix(in srgb, var(--fg) 4%, transparent), transparent 32%), var(--bg); }
+.home .inner::before { content: "FINANCIAL TECHNOLOGY / BUILT IN AFRICA"; display: block; margin: 0 auto 1.4rem; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .18em; }
 .inner { max-width: 66rem; margin: 0 auto; padding: 0 1.5rem; text-align: center; }
-.brand { display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1.4rem; color: #bdbdbd; font-family: var(--font-display); font-size: .78rem; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; animation: fadeUp .7s backwards cubic-bezier(.2,.7,.2,1); }
-.brand :global(svg) { color: #d0d0d0; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1.4rem; color: var(--muted); font-family: var(--font-display); font-size: .78rem; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; animation: fadeUp .7s backwards cubic-bezier(.2,.7,.2,1); }
+.brand :global(svg) { color: var(--fg); }
 .inner h1 { max-width: 62rem; margin: 0 auto; font-size: clamp(2.8rem, 7.8vw, 6rem); font-weight: 540; line-height: .99; letter-spacing: -.055em; text-wrap: balance; }
 .compact .inner h1 { max-width: 58rem; font-size: clamp(2.65rem, 6.6vw, 5.2rem); }
 .word { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .045em .1em 0; margin-bottom: -.1em; }
 .word > span { display: inline-block; animation: wordUp .8s calc(var(--n) * 36ms + 80ms) cubic-bezier(.2,.7,.2,1) backwards; }
-.word:nth-of-type(3n) > span { color: #d0d0d0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-style: italic; letter-spacing: -.065em; }
+.word:nth-of-type(3n) > span { color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-style: italic; letter-spacing: -.065em; }
 @keyframes wordUp { from { transform: translateY(105%); } }
 .sub { max-width: 43rem; margin: 1.6rem auto 0; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.7; animation: fadeUp .8s .3s backwards cubic-bezier(.2,.7,.2,1); }
 .actions { display: flex; flex-direction: column; gap: .75rem; max-width: 22rem; margin: 2rem auto 0; animation: fadeUp .8s .4s backwards cubic-bezier(.2,.7,.2,1); }

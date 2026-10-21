@@ -1,7 +1,5 @@
 .page { background: var(--bg); color: var(--fg); }
 .hero {
-  --fg: #f5f5f5;
-  --muted: #d0d0d0;
   position: relative;
   display: grid;
   min-height: min(42rem, 88vh);
@@ -10,18 +8,18 @@
   padding: 8rem 1.25rem 6rem;
   text-align: center;
   color: var(--fg);
-  background-color: #080808;
-  background-image: radial-gradient(circle, rgb(255 255 255 / .11) 2px, transparent 2.5px);
+  background-color: var(--bg);
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--fg) 10%, transparent) 2px, transparent 2.5px);
   background-position: center 1.2rem;
   background-size: 3rem 3rem;
 }
-.hero::before { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(0 0 0 / .25), #080808 94%); content: ''; }
+.hero::before { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, var(--bg) 94%); content: ''; }
 .heroContent { position: relative; width: min(100%, 52rem); }
 .eyebrow { margin: 0 0 .7rem; color: #9fc5df; font-size: .78rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
 .hero h1 { max-width: 50rem; margin: 0 auto; font-size: clamp(2.8rem, 6.5vw, 4.25rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.05; }
-.heroText { max-width: 43rem; margin: 1.2rem auto 0; color: #d0d0d0; font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 1.65; }
-.heroButton { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1.45rem; padding: .85rem 1.1rem; border-radius: .7rem; background: #f5f5f5; color: #111; font-size: .95rem; font-weight: 500; text-decoration: none; transition: transform .2s, background .2s; }
-.heroButton:hover { transform: translateY(-2px); background: #dedede; }
+.heroText { max-width: 43rem; margin: 1.2rem auto 0; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 1.65; }
+.heroButton { display: inline-flex; align-items: center; gap: .55rem; margin-top: 1.45rem; padding: .85rem 1.1rem; border-radius: .7rem; background: var(--fg); color: var(--bg); font-size: .95rem; font-weight: 500; text-decoration: none; transition: transform .2s, background .2s; }
+.heroButton:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--fg) 86%, var(--bg)); }
 .section { padding: clamp(4.5rem, 8vw, 7rem) 1.25rem; }
 .sectionTint { background: var(--surface); }
 .content { width: min(100%, 68rem); margin: 0 auto; }
